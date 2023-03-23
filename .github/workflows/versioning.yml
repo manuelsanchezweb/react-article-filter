@@ -16,17 +16,11 @@ jobs:
       - name: Install NVM
         run: |
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-          echo "NVM_DIR=$HOME/.nvm" >> $GITHUB_ENV
-          echo "source $HOME/.nvm/nvm.sh" >> $GITHUB_ENV
-
-      - name: Load NVM
-        run: |
-          echo "NVM_DIR=$HOME/.nvm" >> $GITHUB_ENV
-          echo "source $HOME/.nvm/nvm.sh" >> $GITHUB_ENV
 
       - name: Install and use Node.js from .nvmrc
         run: |
-          source $NVM_DIR/nvm.sh
+          echo "source ~/.nvm/nvm.sh" >> ~/.bashrc
+          source ~/.bashrc
           nvm install
           nvm use
 
