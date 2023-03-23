@@ -4,8 +4,11 @@
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-
   padding: 100px 0;
+}
+
+#root {
+  width: 100%;
 }
 
 .App {
@@ -31,6 +34,7 @@ body {
   min-height: 100vh;
   max-width: 1400px;
   margin: 0 auto;
+  width: 100%;
 }
 
 button {
